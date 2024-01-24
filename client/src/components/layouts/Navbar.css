@@ -1,0 +1,115 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #CEDEBD;
+}
+
+
+
+.leftNavbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.leftNavbar p{
+padding: 40px;
+color: #435334;
+font-size: 35px;
+}
+
+.leftNavbar h4{
+color: #435334;
+font-size: 20px;
+}
+
+
+h2 {
+  color: #435334;
+  padding-bottom: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* เพิ่มบรรทัดนี้เพื่อจัดการจัดตำแหน่งอันดับของปุ่มเมนูในหน้าจอเล็ก */
+}
+
+nav ul li {
+  list-style: none;
+  margin-right: 15px; /* เพิ่มระยะห่างระหว่างปุ่มเมนูในหน้าจอเล็ก */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* ลบระยะห่างของปุ่มเมนูสุดท้ายในหน้าจอเล็ก */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ccc;
+}
+
+.btn-signin {
+  background: #435334;
+  border-radius: 5px;
+  color: white;
+}
+
+/* เพิ่มสไตล์เมื่อหน้าจอเล็ก */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  h2 {
+    padding-bottom: 0;
+  }
+
+  nav ul {
+    display: none; /* ซ่อนเมนูปกติในหน้าจอเล็ก */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav ul.active {
+    display: flex; /* แสดงเมนูเมื่อคลิกที่ hamburger icon */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .btn-signin {
+    margin-top: 10px;
+  }
+
+  .menu-icon {
+    display: block; /* แสดง hamburger icon เป็นบล็อกเมื่อใช้งานในหน้าจอเล็ก */
+    cursor: pointer;
+  }
+}

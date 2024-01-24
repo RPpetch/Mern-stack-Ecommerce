@@ -1,0 +1,21 @@
+
+.AccountContainer{
+    border: 4px solid #9EB384;
+    border-radius: 20px;
+    margin: 50px auto;
+    padding: 50px auto;
+    box-sizing: border-box;
+    height: 500px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+label{
+    font-size: 20px;
+    margin: 5px;
+}
+
